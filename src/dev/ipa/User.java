@@ -8,9 +8,9 @@ public class User {
     private String name;
     private ArrayList<Double> transactions;
 
-    public User(String name, ArrayList<Double> transactions) {
+    public User(String name) {
         this.name = name;
-        this.transactions = transactions;
+        this.transactions = new ArrayList<>();
 
     }
 
@@ -18,14 +18,12 @@ public class User {
         return name;
     }
 
-    public ArrayList<Double> getTransacton() {
+    public ArrayList<Double> getTransactions() {
         return transactions;
     }
 
-    public void setTransatction(Double amount) {
-       transactions.add(amount);
+
+    public void addTransaction(Double amount) {
+        transactions.add(amount);
     }
-
-
-
 }
